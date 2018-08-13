@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>おみくじ</title>
+</head>
+<body>
+	<h1>今日の運勢は？</h1>
+	<button onclick="unsei()">占う</button>
+	<div>
+		<h2>今日はどんな運勢でしょう？</h2>
+		<p id="myArea"></p>
+	</div>
+<script>
+var kuji = ["大吉","中吉","小吉","凶"];
+		
+function unsei(){
+	var myArea = document.getElementById("myArea");
+	var num = Math.floor(kuji.length * Math.random());
+	myArea.innerHTML = kuji[num];
+}
+</script>
+</body>
+</html>
