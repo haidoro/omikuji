@@ -11,13 +11,21 @@
 		<h2>今日はどんな運勢でしょう？</h2>
 		<p id="myArea"></p>
 	</div>
-<script>
-var kuji = ["大吉","中吉","小吉","凶"];
-		
+<script>		
 function unsei(){
 	var myArea = document.getElementById("myArea");
-	var num = Math.floor(kuji.length * Math.random());
-	myArea.innerHTML = kuji[num];
+	var num = Math.floor(4 * Math.random());
+	switch(num){
+		case 0: myArea.innerHTML ="大吉";
+		break;
+		case 1: myArea.innerHTML ="中吉";
+		break;
+		case 2: myArea.innerHTML ="小吉";
+		break;
+		case 3: myArea.innerHTML ="凶";
+		break;
+		default:  myArea.innerHTML ="不正をした";
+		}
 }
 </script>
 </body>
